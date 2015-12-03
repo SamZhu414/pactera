@@ -3,54 +3,51 @@
  */
 var dataArray = function(){
     var titleArray = [
-        "HR+乳腺癌靶向治疗新选择",
-        "HR+ ABC领域的治疗进展及展望",
-        "内分泌治疗是乳腺癌治疗中最早的靶向治疗",
-        "转移性乳腺癌的治疗策略",
-        "ER阳性MBC",
-        "化疗与内分泌治疗的真实世界模式 ",
-        "激素受体阳性乳腺癌治疗中面临的主要挑战",
-        "HR+HER2– 晚期乳腺癌的内分泌治疗及靶向治疗",
-        "PI3K抑制剂",
-        "PI3K被认为是有希望对 HR+乳腺癌进行治疗的靶向药物",
-        "在HR+乳腺癌中已发现了多种PI3K/AKT/mTOR通路改变情况",
-        "临床前模型显示加用buparlisib可增强氟维司群的活性并逆转耐药现象",
-        "CBKM120F2302 BELLE-2",
-        "BELLE-3：在HR+/HER2– BC绝经后妇女中使用Buparlisib与氟维司群",
-        "BELLE-2的关键入选标准",
-        "FERGI II期研究第 I部分：AI耐药 （ER+）局部晚期或转移性乳腺癌（ MBC ）患者中使用Pictilisib (GDC-0941) +氟维司群vs.氟维司群",
-        "FERGI研究：无疾病进展存活期",
-        "FERGI 研究：基于肿瘤PIK3CA 突变状态的PFS",
-        "SANDPIPER ：在PIK3CA突变的ER+/HER2− 局部晚期或转移性乳腺癌患者中应用taselisib（GDC-0032）+氟维司群的III期研究",
-        "CDK4/6抑制剂",
-        "细胞周期蛋白D/CDK4/6通路",
-        "PALOMA-1/TRIO-18：研究设计（NCT00721409）",
-        "PALOMA-1/TRIO-18：无疾病进展时间（ITT）",
-        "PALOMA-1/TRIO-18 ：无疾病进展时间（第1部分和 第2部分）",
-        "PALOMA-1/TRIO-18：总生存时间（ITT）",
-        "PALOMA-1/TRIO-18：结论",
-        "PALOMA-2：研究设计（NCT01740427）",
-        "PALOMA-3： FUL ± PAL治疗既往内分泌治疗中疾病进展的绝经前、后HR+/HER2– MBC的III期试验",
-        "不良事件：所有原因",
-        "主要终点：PFS（ITT 人群）",
-        "PFS：患者亚组分析– 一些见解",
-        "关键次要疗效终点总结",
-        "结论",
-        "PALOMA-3 vs. BOLERO-2：PFS （研究者评估）",
-        "LEE011：主要特征",
-        "LEE011在ER+ 乳腺癌中的抗肿瘤活性",
-        "MONALEESA-2：研究设计",
-        "MONALEESA-3：研究设计",
-        "MONALEESA-7：HR+/HER2− ABC的绝经前患者中使用ribociclib与他莫昔芬/NSAI+戈舍瑞林的研究",
-        "在一线HR+ ABC 中进行的PALOMA-2、MONALEESA-2和MONARCH-3 III期临床试验的总结",
-        "HR+乳腺癌领域目前以内分泌为基础的治疗模式以及进行中的临床研究",
-        "以证据为基础的诊断，治疗指南，年度更新",
-        "我们到底是在哪里",
-        "激素受体阳性（HR+）晚期乳腺癌（ABC）：标准治疗",
-        "激素受体阳性晚期乳腺癌：新选择",
-        "MBC领域将来的治疗策略",
-        "HR+ 晚期乳腺癌靶向治疗：希望与挑战",
-        "循证乳腺癌治疗"];
+        "晚期肾细胞癌免疫治疗新进展",
+        "细胞因子治疗时代： 晚期肾细胞癌患者的生存期",
+        "靶向药物治疗时代： 晚期肾细胞癌患者的生存期",
+        "调 研",
+        "调研结果",
+        "调 研",
+        "调研结果",
+        "目 录",
+        "晚期肾细胞癌的免疫治疗：研究兴趣再次高涨",
+        "治疗肾癌的在研PD-1通路抑制剂",
+        "目 录",
+        "阻断PD-1是肿瘤免疫治疗的策略",
+        "CheckMate-025 III期研究：Nivolumab单药治疗既往接受过治疗的mRCC患者",
+        "CheckMate-025研究：总生存",
+        "CheckMate-025研究：无进展生存期",
+        "CheckMate-025研究：抗肿瘤活性",
+        "CheckMate-025研究：≥10%患者出现的治疗相关AE",
+        "CHECKMATE-025研究：结论",
+        "目 录",
+        "Atezolizumab拮抗PD-L1的免疫抑制作用",
+        "PCD4989g研究：Atezolizumab的Ia期临床研究",
+        "Atezolizumab Ia期临床研究: 安全性和耐受性",
+        "Atezolizumab Ia期临床研究: 研究者评估的疗效(中期分析)",
+        "目 录",
+        "PD-1抑制剂序贯VEGFR-TKI :研究设计",
+        "PD-1抑制剂序贯VEGFR-TKI :疗效和安全性",
+        "目 录",
+        "CheckMate 016研究：Nivolumab联合舒尼替尼或培唑帕尼的临床研究",
+        "Nivolumab联合舒尼替尼或培唑帕尼临床研究: 安全性",
+        "Nivolumab联合舒尼替尼或培唑帕尼 临床研究: 抗肿瘤活性",
+        "培唑帕尼+Pembrolizumab一线联合治疗mRCC的在研研究",
+        "Atezolizumab联合贝伐珠单抗的Ib期研究 (NCT01633970):设计",
+        "Atezolizumab联合贝伐珠单抗的Ib期研究：肾癌患者的安全性和疗效的中期分析(n=10)",
+        "在研II期研究：Atezolizumab+贝伐珠单抗 vs Atezolizumab vs 舒尼替尼用于mRCC一线治疗",
+        "目 录",
+        "CheckMate-016研究：Nivolumab-伊匹单抗联合治疗mRCC患者的I期研究",
+        "Checkmate-016研究：治疗相关的不良事件",
+        "CheckMate 016研究: PFS",
+        "正在进行的CheckMate-214 III期研究：Nivolumab+伊匹单抗对比舒尼替尼单药一线治疗mRCC",
+        "主要肾癌在研免疫治疗研究的预计完成日期",
+        "调 研",
+        "调研结果",
+        "中国晚期肾癌患者还将长期依赖靶向治疗",
+        "总 结"
+    ];
 
     var imageArray = ["5-RenalProgress-0001.png","5-RenalProgress-0002.png","5-RenalProgress-0003.png",
                     "5-RenalProgress-0004.png","5-RenalProgress-0005.png","5-RenalProgress-0006.png",
