@@ -5,15 +5,6 @@ var audioSections = dataArray();
 var totalAudioPage = audioSections.length;
 var dirPath = "course/4-LateRenal/";
 
-window.onload=function(){
-    document.getElementById("pageNumber").innerHTML = "1 / " + totalAudioPage;
-};
-
-var timeUpdate = function(track){
-    var currentTime = Math.floor(track.currentTime).toString();
-    //var duration = Math.floor(track.duration).toString();
-    changeAudioImageSrc(currentTime);
-};
 
 var changeAudioImageSrc = function(time){
     for(var i=0;i < totalAudioPage; i ++){

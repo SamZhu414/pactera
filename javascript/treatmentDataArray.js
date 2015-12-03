@@ -74,3 +74,12 @@ var dataArray = function(){
     }
     return sections;
 };
+
+var dirPath = "course/3-treatment-ppt/";
+
+// when video or audio time changed, call this function.
+var timeUpdate = function(track){
+    var currentTime = Math.floor(track.currentTime).toString();
+    //var duration = Math.floor(track.duration).toString();
+    changeImageSrcPageNumber(currentTime, dirPath);
+};

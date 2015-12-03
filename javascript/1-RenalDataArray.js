@@ -1,6 +1,9 @@
 /**
  * Created by Sam on 11/10/2015.
  */
+
+
+
 var dataArray = function(){
     var titleArray = [
         "晚期肾癌治疗选择和模式探讨",
@@ -69,4 +72,14 @@ var dataArray = function(){
         section = null;
     }
     return sections;
+};
+
+
+var dirPath = "course/1-Renal/";
+
+// when video or audio time changed, call this function.
+var timeUpdate = function(track){
+    var currentTime = Math.floor(track.currentTime).toString();
+    //var duration = Math.floor(track.duration).toString();
+    changeImageSrcPageNumber(currentTime, dirPath);
 };
