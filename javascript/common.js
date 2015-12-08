@@ -7,7 +7,20 @@ var stringLength = 8;
 var dArray = dataArray();
 var isPlaying = false;
 
+var sub=function(str,n){
+    var r=/[^\x00-\xff]/g;
+    if(str.replace(r,"mm").length<=n){return str;}
+    var m=Math.floor(n/2);
+    for(var i=m;i<str.length;i++){
+        if(str.substr(0,i).replace(r,"mm").length>=n){
+            return str.substr(0,i)+"...";
+        }
+    }
+    return str;
+};
+
 window.onload=function(){
+
     document.getElementById("pageNumber").innerHTML = "1 / " + dArray.length;
     for(var i=0;i < dArray.length; i ++){
         var sectionObject = new Object();
@@ -15,7 +28,8 @@ window.onload=function(){
         var li = document.createElement('li');
         var strTitle;
         if(sectionObject.title.length > stringLength){
-            strTitle = sectionObject.title.substring(0,stringLength)+"...";
+            var subStr = sub(sectionObject.title,12);
+            strTitle = subStr + "...";
         }else{
             strTitle = sectionObject.title;
         }
