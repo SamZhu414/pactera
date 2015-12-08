@@ -27,7 +27,7 @@ window.onload=function(){
         sectionObject = dArray[i];
         var li = document.createElement('li');
         var strTitle = subString(sectionObject.title,12);
-        var listNum = i +1;
+        var listNum = i + 1;
         listNum = listNum + ". ";
         var liHtml =  "<div class='title_div_left'>";
         liHtml = liHtml + "<a title='";
