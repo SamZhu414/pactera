@@ -7,20 +7,7 @@ var stringLength = 8;
 var dArray = dataArray();
 var isPlaying = false;
 
-var subString = function(str, n){
-    var r = /[^\x00-\xff]/g;
-    if(str.replace(r,"mm").length <= n){return str;}
-    var m = Math.floor(n/2);
-    for(var i = m; i < str.length; i++){
-        if(str.substr(0,i).replace(r,"mm").length >= n){
-            return str.substr(0, i) + "...";
-        }
-    }
-    return str;
-};
-
 window.onload=function(){
-
     document.getElementById("pageNumber").innerHTML = "1 / " + dArray.length;
     for(var i=0;i < dArray.length; i ++){
         var sectionObject = new Object();
@@ -78,6 +65,7 @@ var changeImgSrcPageNum = function(imgUrl, pageNum){
     document.getElementById("imgView").src = imgUrl;
     document.getElementById("pageNumber").innerHTML = pageNum;
 };
+
 // page redirect when clicked title.
 var goPage = function(index){
     var videoPlayer = document.getElementsByTagName("video")[0];
@@ -89,4 +77,16 @@ var goPage = function(index){
     }
 };
 
+// process string
+var subString = function(str, n){
+    var r = /[^\x00-\xff]/g;
+    if(str.replace(r,"mm").length <= n){return str;}
+    var m = Math.floor(n/2);
+    for(var i = m; i < str.length; i++){
+        if(str.substr(0,i).replace(r,"mm").length >= n){
+            return str.substr(0, i) + "...";
+        }
+    }
+    return str;
+};
 
