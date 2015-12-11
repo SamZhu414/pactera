@@ -16,6 +16,7 @@ var dataArray = function(){
         "EVEREXES 研究：东亚患者中EVE+ EXE治疗ABC的初步安全性结果",
         "BRAWO研究的首次中期分析的结果：EVE + EXE用于ER+女性患者",
         "BRAWO： EVE + EXE 用于ER+ 妇女-临床实践数据",
+        "EVE治疗中的AE总结",
         "与依维莫司相关的特殊不良事件的管理",
         "依维莫司剂型及给药",
         "血液学和代谢监测",
@@ -63,7 +64,7 @@ var dataArray = function(){
                          "27:36","27:56","29:01","29:55","31:07","32:25"];
 
     var sections = new Array();
-    for(var i = 0; i < titleArray.length; i ++){
+    for(var i = 0; i < imageArray.length; i ++){
         var section = new Object();
         section.time = timeArray[i];
         section.title = titleArray[i];
