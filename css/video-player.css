@@ -143,3 +143,10 @@ video{
     width: 755px!important;
     height: 50px!important;"
 }
+
+.video-container-border{
+    border: #555555 solid 1px;
+    padding: 2px;
+    height: 360px;
+    width: 630px;
+}

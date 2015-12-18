@@ -1,0 +1,32 @@
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+    <link href="video-js/video-js.css" rel="stylesheet" />
+
+    <link href="css/video-player.css" rel="stylesheet" />
+
+    <script src="video-js/video.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+    <div class="video-container">
+        <!--播放器代码开始-->
+        <div class="video-div video-container-border">
+            <!--<video id="video_player" controls preload="auto">-->
+            <video width="630" height="360" id="video_player" class="video-js vjs-default-skin vjs-big-play-centered"
+                   controls preload="false" data-setup=''>
+                <source src="video/renal.mp4" type='video/mp4' />
+            </video>
+
+        </div>
+        <!--播放器代码结束-->
+
+    </div>
+
+</form>
+
+</body>
