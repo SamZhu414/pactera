@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .unSelectedColor{
+            color: #999999;
+        }
+        .selectedColor{
+            color: #000000;
+        }
+        .checkboxStyle{
+            display: block;
+            width: 128px;
+            cursor: pointer;
+            height:128px;
+        }
+
+    </style>
+
+</head>
+<body>
+<img id="myCheckBox" class="checkboxStyle" src="images/checkBoxSelected.png" onclick="changeImageSrc(this)" />
+<br />
+<select id="rtl" class="unSelectedColor" onchange="getCurrentSelectValue()">
+    <option value="1" label="" selected>请选择一个项目进行</option>
+    <option label="">aaaaaaa</option>
+    <option label="">bbbbbbb</option>
+    <option label="">ccccccc</option>
+    <option label="">ddddddd</option>
+</select>
+
+<script type="text/javascript">
+    function getCurrentSelectValue()
+    {
+        var rtl = document.getElementById("rtl");
+        if(rtl.value == 1){
+//            alert(rtl.value);
+            rtl.className = "";
+            rtl.className ="unSelectedColor";
+
+        }else{
+//            alert(rtl.value);
+            rtl.className = "";
+            rtl.className ="selectedColor";
+        }
+    }
+    function changeImageSrc(img){
+        var myArray = img.src.split("/");
+        var imgName = myArray[myArray.length - 1];
+        if(imgName == "checkBoxSelected.png"){
+            img.src = "checkBoxUnSelected.png"
+        }else{
+            img.src = "checkBoxSelected.png"
+        }
+    }
+</script>
+
+</body>
+</html>
