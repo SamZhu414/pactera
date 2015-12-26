@@ -8,7 +8,7 @@
     <link href="css/video-player.css" rel="stylesheet">
 </head>
 <body>
-<div class="video-container" id="video-container">
+<div class="video-container switch-div-control" id="video-container">
     <div class="left-video-title">
         <div class="video-div">
             <!--<video id="video_player" controls preload="auto">-->
@@ -23,13 +23,25 @@
     </div>
 
     <div id="courseDiv" class="courseDiv">
-        <img src="course/2-emerging-ppt/2-Emerging01.png" class="pptImageView" id="imgView" />
-        <div class="pageNumber" id="pageNumber"></div>
+        <img src="course/2-emerging-ppt/2-Emerging01.png" class="pptImageView" />
+        <div class="pageNumber"></div>
     </div>
 
     <div class="clear"></div>
 
 </div>
+
+<div class="audio-container switch-div-control" id="audio-container">
+    <div class="audioCourse">
+        <img src="course/2-emerging-ppt/2-Emerging01.png" class="pptImageView" />
+        <div class="pageNumber audio-page-number"></div>
+        <audio id="audio_player" style="width: 755px; height: 50px;" controls  preload="auto" onTimeUpdate="timeUpdate(this)">
+            <source src="video/2-NH.mp3" type='audio/mp3' />
+        </audio>
+    </div>
+    <div class="clear"></div>
+</div>
+
 
 <script type="text/javascript" src="javascript/emergingDataArray.js"></script>
 <script type="text/javascript" src="javascript/common.js"></script>

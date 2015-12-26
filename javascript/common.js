@@ -6,9 +6,13 @@
 var stringLength = 8;
 var dArray = dataArray();
 var isPlaying = false;
+var numOfBrowser;
+var totalVideoPage = dArray.length;
 
 window.onload=function(){
-    document.getElementById("pageNumber").innerHTML = "1 / " + dArray.length;
+    browserCheck();
+
+    document.getElementsByClassName("pageNumber")[numOfBrowser].innerHTML = "1 / " + totalVideoPage;
     for(var i=0;i < dArray.length; i ++){
         var sectionObject = new Object();
         sectionObject = dArray[i];
@@ -38,7 +42,7 @@ var changeImageSrcPageNumber = function(time, dirPath){
         var firstSection = dArray[i];
         if(firstSection.time == time){
             var imgUrl = dirPath + firstSection.image;
-            changeImgSrcPageNum(imgUrl,  i+1 + " / " + totalPage);
+            changeImgSrcPageNum(imgUrl,  i+1);
             break;
         }
         if(i < totalPage - 1){
@@ -46,14 +50,14 @@ var changeImageSrcPageNumber = function(time, dirPath){
             var secondSection = dArray[tmpNum];
             if(firstSection.time < time   && secondSection.time > time ){
                 var imgUrl = dirPath + firstSection.image;
-                changeImgSrcPageNum(imgUrl,  tmpNum + " / " + totalPage);
+                changeImgSrcPageNum(imgUrl,  tmpNum);
                 break;
             }
         }else if(i == totalPage - 1){
             var secondSection = dArray[tmpNum];
             if(firstSection.time < time   && secondSection.time > time ){
                 var imgUrl = dirPath + firstSection.image;
-                changeImgSrcPageNum(imgUrl,  tmpNum + " / " + totalPage);
+                changeImgSrcPageNum(imgUrl,  tmpNum);
                 break;
             }
         }
@@ -62,8 +66,8 @@ var changeImageSrcPageNumber = function(time, dirPath){
 
 // implementation change function
 var changeImgSrcPageNum = function(imgUrl, pageNum){
-    document.getElementById("imgView").src = imgUrl;
-    document.getElementById("pageNumber").innerHTML = pageNum;
+    document.getElementsByClassName("pptImageView")[numOfBrowser].src = imgUrl;
+    document.getElementsByClassName("pageNumber")[numOfBrowser].innerHTML = pageNum + " / " + totalVideoPage;
 };
 
 // page redirect when clicked title.
@@ -88,5 +92,30 @@ var subString = function(str, n){
         }
     }
     return str;
+};
+
+
+var browserCheck = function () {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
+        document.getElementById("audio-container").className="";
+        document.getElementById("audio-container").className="audio-container";
+
+        //document.getElementById("video-container").className="";
+        //document.getElementById("video-container").className="video-container";
+        numOfBrowser = 1;
+    }else{
+        document.getElementById("audio-container").className="";
+        document.getElementById("audio-container").className="audio-container";
+        numOfBrowser = 1;
+    }
 };
 

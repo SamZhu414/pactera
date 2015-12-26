@@ -23,12 +23,23 @@
     </div>
 
     <div id="courseDiv" class="courseDiv">
-        <img src="course/3-RenalNew/3-RenalNew-0001.png" class="pptImageView" id="imgView" />
-        <div class="pageNumber" id="pageNumber"></div>
+        <img src="course/3-RenalNew/3-RenalNew-0001.png" class="pptImageView" />
+        <div class="pageNumber"></div>
     </div>
 
     <div class="clear"></div>
 
+</div>
+
+<div class="audio-container switch-div-control" id="audio-container">
+    <div class="audioCourse">
+        <img src="course/3-RenalNew/3-RenalNew-0001.png" id="imgView" class="pptImageView" />
+        <div class="pageNumber audio-page-number" id="pageNumber"></div>
+        <audio id="audio_player" controls  preload="auto"  style="width: 755px; height: 50px;" onTimeUpdate="timeUpdate(this)">
+            <source src="video/3-renal.mp3" type='audio/mp3' />
+        </audio>
+    </div>
+    <div class="clear"></div>
 </div>
 
 <script type="text/javascript" src="javascript/3-RenalNewDataArray.js"></script>
