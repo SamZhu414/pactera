@@ -106,12 +106,9 @@ var browserCheck = function () {
     var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
     var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
     if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
-        document.getElementById("audio-container").className="";
-        document.getElementById("audio-container").className="audio-container";
-
-        //document.getElementById("video-container").className="";
-        //document.getElementById("video-container").className="video-container";
-        numOfBrowser = 1;
+        document.getElementById("video-container").className="";
+        document.getElementById("video-container").className="video-container";
+        numOfBrowser = 0;
     }else{
         document.getElementById("audio-container").className="";
         document.getElementById("audio-container").className="audio-container";
