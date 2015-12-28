@@ -1,0 +1,124 @@
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-family: Arial;
+    font-size: 13px;
+}
+.video-container{
+    width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 2px;
+    overflow: hidden;
+    border: #cccccc solid 1px;
+    padding: 1px;
+}
+.title_block{
+    float: left;
+    width: 200px;
+    position: relative;
+    background: #eeeeee;
+    height: 100%;
+
+}
+.video-block{
+    float: left;
+    width: 697px;
+
+    position: relative;
+    height: 100%;
+    padding-left: 1px;
+    margin-left: 1px;
+    border-left: #cccccc solid 1px;
+}
+.video-block img{
+    width: 697px;
+    height: 460px;
+}
+.img-div{
+    position: relative;
+}
+.clear{
+    clear: both;
+}
+
+.unread-item{
+    background-color: #bbbbbb;
+}
+.read-item{
+    background-color: #eeeeee;
+}
+.current-item{
+    background-color: #5f92d0;
+    color: white;
+}
+.no-dir-item{
+    padding-left: 20px!important;
+}
+.title_div_left
+{
+    padding: 5px;
+    float: left;
+    width:120px;
+}
+.title_div_left a{
+    cursor: pointer;
+}
+.title_div_right{
+    padding: 5px 10px 0px 5px;
+    font-size: 11px;
+    float: right;
+}
+.listTitle{
+    margin: 0px;
+    padding: 0px;
+}
+.listTitle li
+{
+    text-align: left;
+    font-size: 12px;
+    list-style: none;
+    height: 30px;
+    line-height: 15px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border-bottom: #999999 dotted 1px;
+}
+
+.div-player{
+    float: left;
+}
+.div-buttons{
+
+    float: left;
+}
+.div-buttons a{
+    cursor: pointer;
+    width: 56px;
+    height: 36px;
+    display: block;
+    float: left;
+    margin-left: 2px;
+    line-height: 36px;
+    background: #000000;
+    text-align: center;
+    color: #FFFFFF;
+ }
+.div-buttons a:hover{
+    background: #555555;
+}
+.player-area{
+
+}
+
+.pageNumber{
+    position: absolute;
+    font-size: 13px;
+    right: 0px;
+    bottom: 2px;
+    padding: 5px;
+    height:15px;
+    background: #444444;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    border: #FFFFFF solid 1px;
+}

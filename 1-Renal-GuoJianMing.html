@@ -32,14 +32,10 @@
 </div>
 
 <div class="audio-container switch-div-control" id="audio-container">
-    <div class="audioCourse">
-        <img src="course/2-emerging-ppt/2-Emerging01.png" class="pptImageView" />
-        <div class="pageNumber audio-page-number"></div>
-        <audio id="audio_player" style="width: 755px; height: 50px;" controls  preload="auto" onTimeUpdate="timeUpdate(this)">
-            <source src="video/2-NH.mp3" type='audio/mp3' />
-        </audio>
-    </div>
-    <div class="clear"></div>
+    <video width="755" height="425" class="video-js vjs-default-skin vjs-big-play-centered"
+           controls preload="false" data-setup=''>
+        <source src="video/2-NH.mp4" type='video/mp4' />
+    </video>
 </div>
 
 <script type="text/javascript" src="javascript/1-RenalDataArray.js"></script>
