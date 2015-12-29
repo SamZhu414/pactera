@@ -10,12 +10,12 @@ var stringLength = 21;
 var dArray = dataArray();
 var isPlaying = false;
 var currentNumber;
-var preCurrentNumber;
 var totalVideoPage = dArray.length;
 
 $(document).ready(function(){
     $("#pageNumber").html("1 / " + totalVideoPage);
     initTitle();
+    setLiStyle();
 });
 
 var initTitle = function(){
@@ -25,27 +25,19 @@ var initTitle = function(){
         var li = document.createElement('li');
 
         var strTitle = subString(sectionObject.title,stringLength);
-        var liHtml =  "";
+        var liHtml = "";
         if(sectionObject.isDir == 0){
             liHtml = liHtml + "<div class='title_div_left no-dir-item'>";
         }else{
             liHtml = liHtml + "<div class='title_div_left'>";
         }
-        liHtml = liHtml + "<a title='";
-        liHtml = liHtml + sectionObject.title;
-        liHtml = liHtml + "' onclick='goPage(";
-        liHtml = liHtml + sectionObject.time;
-        liHtml = liHtml + ")'>";
+        liHtml = liHtml + "<a title='"  + sectionObject.title + "' ";
+        liHtml = liHtml + " onclick='goPage(" + sectionObject.time + ")'>";
         liHtml = liHtml  + strTitle;
-        liHtml = liHtml + "</a></div><div class='title_div_right'> ";
-        liHtml = liHtml + sectionObject.showTime;
-        liHtml = liHtml + " </div><div class='clear'></div>" ;
+        liHtml = liHtml + "</a></div><div class='title_div_right'> " + sectionObject.showTime + " </div>";
+        liHtml = liHtml + "<div class='clear'></div>" ;
         li.innerHTML = liHtml;
-
         $("#listTitle").append(li);
-        $("#listTitle li").each(function(index){
-            $(this).addClass(" unread-item ");
-        });
     }
 };
 
@@ -144,25 +136,8 @@ var changeImageAndAudio = function (index){
     goPage(currentArray.time);
 };
 
-
-//var browserCheck = function () {
-//    var sUserAgent = navigator.userAgent.toLowerCase();
-//    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-//    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-//    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-//    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-//    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-//    var bIsAndroid = sUserAgent.match(/android/i) == "android";
-//    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-//    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-//    if (!(bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
-//        document.getElementById("video-container").className="";
-//        document.getElementById("video-container").className="video-container";
-//        numOfBrowser = 0;
-//    }else{
-//        document.getElementById("audio-container").className="";
-//        document.getElementById("audio-container").className="audio-container";
-//        numOfBrowser = 1;
-//    }
-//};
-//
+var setLiStyle = function(){
+    $("#listTitle li").each(function(index){
+        $(this).addClass(" unread-item ");
+    });
+};
