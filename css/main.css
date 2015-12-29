@@ -83,6 +83,9 @@
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     border-bottom: #999999 dotted 1px;
 }
+.listTitle li a{
+    display: block;
+}
 
 .div-player{
     float: left;
