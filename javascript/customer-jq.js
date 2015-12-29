@@ -23,7 +23,6 @@ var initTitle = function(){
         var sectionObject = new Object();
         sectionObject = dArray[i];
         var li = document.createElement('li');
-
         var strTitle = subString(sectionObject.title,stringLength);
         var liHtml = "";
         if(sectionObject.isDir == 0){
