@@ -45,6 +45,10 @@
 
 <script type="text/javascript" src="javascript/treatmentDataArray.js"></script>
 <script type="text/javascript" src="javascript/common.js"></script>
-<script src="video-js/video.js"></script>
+<script type="text/javascript">
+    if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        document.write("<script language='javascript' src='video-js/video.js'><\/script>");
+    }
+</script>
 </body>
 </html>
